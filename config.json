@@ -1,3 +1,17 @@
 {
-    
+    "samples": [
+        {
+            "title": "sprite",
+            "samples": [
+                {
+                    "title": "AAAAA",
+                    "path": "010"
+                },
+                {
+                    "title": "BBBBB",
+                    "path": "010"
+                }
+            ]
+        }
+    ]
 }

@@ -35,8 +35,8 @@
                         <input type="search" class="form-control" ng-model="q" ng-change="saveQuery()" placeholder="filter...">
                     </form>
                     <ul class="nav nav-sidebar">
-                        <li ng-repeat="content in contents | filter:q">
-                            <a href="#" ng-click="preview(content.path, content.param||{})">{{content.name}}</a>
+                        <li ng-repeat="sample in samples | filter:q">
+                            <a href="#" ng-click="preview(sample)">{{sample.title}}</a>
                         </li>
                     </ul>
                 </div>
@@ -55,10 +55,10 @@
 
 var MainCtrl = function($scope, $http) {
     $http.get('config.json').success(function(data) {
-        $scope.contents = data;
+        $scope.samples = data.samples[0].samples;
     });
 
-    $scope.preview = function(path, param) {
+    $scope.preview = function(data) {
         var query = tm.util.QueryString.stringify({
             config: path + "/config.json",
         }.$extend(param));
