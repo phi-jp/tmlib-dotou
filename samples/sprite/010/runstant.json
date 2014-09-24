@@ -1,0 +1,22 @@
+{
+    "version": "0.0.1",
+    "current": "script",
+    "setting": {
+        "title": "runstant test",
+        "detail": "tmlib.js 用公式エディタ. 色々と使えますよ♪"
+    },
+    "code": {
+        "html": {
+            "type": "html",
+            "path": "../index.html"
+        },
+        "style": {
+            "type": "css",
+            "value": ""
+        },
+        "script": {
+            "type": "javascript",
+            "path": "script.js"
+        }
+    }
+}
