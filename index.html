@@ -60,8 +60,8 @@ var MainCtrl = function($scope, $http) {
 
     $scope.preview = function(data) {
         var query = tm.util.QueryString.stringify({
-            config: path + "/config.json",
-        }.$extend(param));
+            config: "/config.json",
+        }.$extend(data));
         var src = "preview.html?" + query;
         if (tm.isMobile) {
             window.open(src);
